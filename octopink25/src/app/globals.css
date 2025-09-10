@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #F8598F; 
+  --color-white: #FFFFFF;
+  --color-text: #424242;
+}
+
+
+@layer base {
+
+}
