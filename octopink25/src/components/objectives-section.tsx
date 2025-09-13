@@ -4,7 +4,7 @@ import Image from "next/image";
 import { objectivesData, type ObjectiveItem } from "../data/objectives-data";
 
 /**
- * ObjectivesSection component displays the three main objectives of WTM Algiers
+ * ObjectivesSection component displays the three main objectives Octopink
  * Features responsive grid layout with icons, titles, and descriptions
  */
 export function ObjectivesSection(): React.JSX.Element {
