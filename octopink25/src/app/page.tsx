@@ -1,7 +1,12 @@
+import { ObjectivesSection } from "../components/objectives-section";
+
 export default function Home() {
   return (
-    <div className="bg-pink text-white text-4xl font-bold flex items-center justify-center min-h-screen">
-      <p className="animate-bounce">Octopink25 Kick Off !!</p>
-    </div>
+    <main>
+      {/* Other sections of your homepage... */}
+      <ObjectivesSection />{" "}
+      {/* Add this line where you want the section to appear */}
+      {/* Other sections of your homepage... */}
+    </main>
   );
 }
