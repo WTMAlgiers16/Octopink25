@@ -1,4 +1,3 @@
-import AboutOctopink from "../components/about-octopink"
 import EventAgenda  from "../components/event-agenda"
 export default function Home() {
   return (
