@@ -7,6 +7,22 @@
 }
 
 
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.1em;
+}
+
+.vertical-text-outline {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.1em;
+  color: white;
+  -webkit-text-stroke: 1px #ec4899; /* Tailwind pink-500 */
+}
+
 @layer base {
 
 }

@@ -9,32 +9,13 @@ export default function EventAgenda() {
         <div className="flex">
           {/* Left side - EVENT AGENDA text */}
           <div className="flex flex-row justify-center items-center mr-6 w-24">
-            <div 
-              className=" text-6xl font-bold text-pink whitespace-nowrap"
-              style={{ 
-                writingMode: 'vertical-rl', 
-                textOrientation: 'mixed',
-                transform: 'rotate(180deg)',
-                letterSpacing: '0.1em'
-              }}
-            >
-              EVENT
-            </div>
-            <div 
-              className=" text-6xl font-bold  whitespace-nowrap mt-2"
-              style={{ 
-                writingMode: 'vertical-rl', 
-                textOrientation: 'mixed',
-                transform: 'rotate(180deg)',
-                letterSpacing: '0.1em',
-                 color: 'white',
-    WebkitTextStroke: '1px var(--color-pink)'
+           <div className="text-4xl md:text-6xl font-bold text-pink whitespace-nowrap vertical-text">
+  EVENT
+</div>
+<div className="text-4xl md:text-6xl font-bold whitespace-nowrap mt-2 vertical-text-outline">
+  AGENDA
+</div>
 
-
-              }}
-            >
-              AGENDA
-            </div>
           </div>
 
           {/* Right side - Content area */}
