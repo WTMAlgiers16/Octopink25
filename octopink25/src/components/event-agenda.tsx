@@ -10,7 +10,7 @@ export default function EventAgenda() {
           {/* Left side - EVENT AGENDA text */}
           <div className="flex flex-row justify-center items-center mr-6 w-24">
             <div 
-              className=" text-6xl font-bold [color:var(--color-pink)] whitespace-nowrap"
+              className=" text-6xl font-bold text-pink whitespace-nowrap"
               style={{ 
                 writingMode: 'vertical-rl', 
                 textOrientation: 'mixed',
@@ -44,25 +44,25 @@ export default function EventAgenda() {
                 <div className="flex">
                   {/* Date section */}
                   <div className="flex flex-col items-center justify-start w-16 mr-4">
-                    <div className="text-4xl font-bold [color:var(--color-text)] leading-none">
+                    <div className="text-4xl font-bold text-text leading-none">
                       {dayData.day}
                     </div>
-                    <div className="text-lg font-bold [color:var(--color-pink)] mt-1">
+                    <div className="text-lg font-bold text-pink mt-1">
                       {dayData.month}
                     </div>
                   </div>
                   
                   {/* Pink vertical line */}
-                  <div className="w-0.5 bg-[var(--color-pink))] mr-6"></div>
+                  <div className="w-0.5 bg-pink mr-6"></div>
                   
                   {/* Events list */}
                   <div className="flex-1 space-y-1">
                     {dayData.events.map((event: AgendaItem, eventIndex: number) => (
                       <div key={eventIndex} className="flex items-center">
-                        <span className="text-xs font-bold [color:var(--color-text)] w-20 mr-4">
+                        <span className="text-xs font-bold text-text w-20 mr-4">
                           {event.time}
                         </span>
-                        <span className="text-xs font-semibold [color:var(--color-text)] uppercase tracking-wide">
+                        <span className="text-xs font-semibold text-text uppercase tracking-wide">
                           {event.title}
                         </span>
                       </div>
