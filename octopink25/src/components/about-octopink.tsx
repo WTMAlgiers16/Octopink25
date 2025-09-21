@@ -4,19 +4,21 @@ import flower from '../../public/images/about-octopink-flower.svg';
 
 export default function AboutSection() {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-         <h2 className="text-4xl text-center font-bold [color:var(--color-pink)] mb-6">
-                What is Octopink ?
+        {/* Title with responsive sizing */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold [color:var(--color-pink)] mb-8 lg:mb-12">
+          What is Octopink?
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2   items-center">
+        
+        {/* Main content grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Content */}
-          <div className="space-y-8 ">
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             {/* What is Octopink Section */}
             <div>
-             
-              <p className="[color:var(--color-text)] leading-relaxed text-lg">
+              <p className="[color:var(--color-text)] leading-relaxed text-base sm:text-lg lg:text-xl">
                 Octopink is an academic and creative initiative 
                 designed to bring together curious young minds 
                 passionate about science, technology, and 
@@ -28,10 +30,10 @@ export default function AboutSection() {
 
             {/* Our Mission Section */}
             <div>
-              <h3 className="text-2xl font-bold [color:var(--color-pink)] mb-4">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold [color:var(--color-pink)] mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="[color:var(--color-text)] leading-relaxed text-lg">
+              <p className="[color:var(--color-text)] leading-relaxed text-base sm:text-lg lg:text-xl">
                 To provide a space where students can learn, 
                 share, and build projects that have a real 
                 impact in the fight against breast cancer.
@@ -40,14 +42,14 @@ export default function AboutSection() {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-96 h-96">
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 flex-shrink-0">
               <Image
                 src={flower}
-                alt="Pink decorative flower"
-                width={384}
-                height={384}
-                className="w-full h-full object-contain"
+                alt="Pink decorative flower representing Octopink initiative"
+                fill
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+                className="object-contain"
                 priority={false}
               />
             </div>
@@ -56,4 +58,4 @@ export default function AboutSection() {
       </div>
     </section>
   );
-};
+}
