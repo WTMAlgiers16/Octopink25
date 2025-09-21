@@ -1,7 +1,11 @@
-export default function Home() {
+import { BreastCancerSection } from "@/components/breast-cancer-section";
+
+export default function HomePage() {
   return (
-    <div className="bg-pink text-white text-4xl font-bold flex items-center justify-center min-h-screen">
-      <p className="animate-bounce">Octopink25 Kick Off !!</p>
-    </div>
+    <main>
+      {/* Other components */}
+      <BreastCancerSection />
+      {/* Other components */}
+    </main>
   );
 }
