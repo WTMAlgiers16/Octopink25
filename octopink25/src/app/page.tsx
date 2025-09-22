@@ -1,8 +1,12 @@
+import { AIDetectionSection } from "@/components/breast-cancer-section";
 import EventAgenda  from "../components/event-agenda"
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="bg-pink text-white text-4xl font-bold flex items-center justify-center min-h-screen">
-    <EventAgenda />
-    </div>
+    <main>
+      {/* Other components */}
+      <AIDetectionSection />
+      <EventAgenda />
+      {/* Other components */}
+    </main>
   );
 }
