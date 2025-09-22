@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import flower from '../../public/images/about-octopink-flower.svg';
 
-export default function AboutSection() {
+export default function AboutOctopink() {
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Title with responsive sizing */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold [color:var(--color-pink)] mb-8 lg:mb-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold text-pink mb-8 lg:mb-12">
           What is Octopink?
         </h2>
         
@@ -17,8 +17,8 @@ export default function AboutSection() {
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             {/* What is Octopink Section */}
-            <div>
-              <p className="[color:var(--color-text)] leading-relaxed text-base sm:text-lg lg:text-xl">
+            <div className="text-center md:text-center lg:text-left">
+              <p className="text-text leading-relaxed text-base sm:text-lg lg:text-xl">
                 Octopink is an academic and creative initiative 
                 designed to bring together curious young minds 
                 passionate about science, technology, and 
@@ -29,11 +29,11 @@ export default function AboutSection() {
             </div>
 
             {/* Our Mission Section */}
-            <div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold [color:var(--color-pink)] mb-3 sm:mb-4">
+            <div className="text-center md:text-center lg:text-left">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-pink mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="[color:var(--color-text)] leading-relaxed text-base sm:text-lg lg:text-xl">
+              <p className="text-text leading-relaxed text-base sm:text-lg lg:text-xl">
                 To provide a space where students can learn, 
                 share, and build projects that have a real 
                 impact in the fight against breast cancer.
