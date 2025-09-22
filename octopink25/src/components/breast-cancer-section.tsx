@@ -9,7 +9,7 @@ export function AIDetectionSection(): React.JSX.Element {
   const data = getBreastCancerData();
 
   return (
-    <section className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 bg-white text-text">
+    <section className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 max-w-7xl mx-auto bg-white text-text">
       <div className="flex flex-col items-center w-full max-w-7xl">
         {/* Header Section */}
         <div className="w-full max-w-4xl mb-10 text-center">

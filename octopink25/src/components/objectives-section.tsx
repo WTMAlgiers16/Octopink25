@@ -9,7 +9,7 @@ import { objectivesData, type ObjectiveItem } from "../data/objectives-data";
  */
 export function ObjectivesSection(): React.JSX.Element {
   return (
-    <section className="px-4 py-24 sm:px-6 lg:px-8 bg-white">
+    <section className="px-4 py-24 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
       {/* Section Title */}
       <h2 className="mx-auto mb-16 text-center text-4xl font-bold text-pink md:text-5xl lg:text-6xl">
         Our Objectives

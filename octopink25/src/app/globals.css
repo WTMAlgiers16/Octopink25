@@ -19,7 +19,12 @@
   transform: rotate(180deg);
   letter-spacing: 0.1em;
   color: white;
-  -webkit-text-stroke: 1px #f8598f; /* Tailwind pink-500 */
+  -webkit-text-stroke: 3px #f8598f; 
+}
+
+.text-stroke{
+  -webkit-text-stroke-width:2px;
+  -webkit-text-stroke-color:#F8598F
 }
 
 @layer base {

@@ -4,7 +4,7 @@ import { ObjectivesSection } from "../components/objectives-section";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="max-w-7xl mx-auto">
       {/* Other components */}
       <ObjectivesSection />
       <AIDetectionSection />
