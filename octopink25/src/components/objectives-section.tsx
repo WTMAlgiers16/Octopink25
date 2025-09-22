@@ -9,17 +9,14 @@ import { objectivesData, type ObjectiveItem } from "../data/objectives-data";
  */
 export function ObjectivesSection(): React.JSX.Element {
   return (
-    <section
-      className="px-4 py-24 sm:px-6 lg:px-8"
-      style={{ backgroundColor: "var(--color-white)" }}
-    >
+    <section className="px-4 py-24 sm:px-6 lg:px-8 bg-white">
       {/* Section Title */}
-      <h2 className="mx-auto mb-16 text-center text-4xl font-bold [color:var(--color-pink)] md:text-5xl lg:text-6xl">
+      <h2 className="mx-auto mb-16 text-center text-4xl font-bold text-pink md:text-5xl lg:text-6xl">
         Our Objectives
       </h2>
 
       {/* Objectives Grid */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-3">
         {objectivesData.map((objective: ObjectiveItem, index: number) => (
           <div
             key={index}
@@ -38,12 +35,12 @@ export function ObjectivesSection(): React.JSX.Element {
             </div>
 
             {/* Title */}
-            <h3 className="mb-4 whitespace-nowrap text-2xl font-bold [color:var(--color-pink)] md:text-3xl lg:text-4xl">
+            <h3 className="mb-4 whitespace-nowrap text-2xl font-bold text-pink md:text-3xl lg:text-4xl">
               {objective.title}
             </h3>
 
             {/* Description */}
-            <p className="max-w-sm whitespace-pre-line text-center text-lg leading-relaxed [color:var(--color-text)] md:text-xl lg:text-2xl">
+            <p className="max-w-sm whitespace-pre-line text-center text-lg leading-relaxed text-text md:text-xl lg:text-2xl">
               {objective.description}
             </p>
           </div>
