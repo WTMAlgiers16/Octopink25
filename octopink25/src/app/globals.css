@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pink: #F8598F; 
-  --color-white: #FFFFFF;
+  --color-pink: #f8598f;
+  --color-white: #ffffff;
   --color-text: #424242;
 }
-
 
 .vertical-text {
   writing-mode: vertical-rl;
@@ -20,9 +19,8 @@
   transform: rotate(180deg);
   letter-spacing: 0.1em;
   color: white;
-  -webkit-text-stroke: 1px #ec4899; /* Tailwind pink-500 */
+  -webkit-text-stroke: 1px #f8598f; /* Tailwind pink-500 */
 }
 
 @layer base {
-
 }
