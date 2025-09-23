@@ -1,3 +1,5 @@
+import type React from "react";
+import { SponsorsSection } from "@/components/sponsors-section";
 import { AIDetectionSection } from "@/components/breast-cancer-section";
 import EventAgenda  from "../components/event-agenda"
 import { ObjectivesSection } from "../components/objectives-section";
@@ -9,6 +11,7 @@ export default function HomePage() {
       <ObjectivesSection />
       <AIDetectionSection />
       <EventAgenda />
+      <SponsorsSection />
       {/* Other components */}
     </main>
   );
