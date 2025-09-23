@@ -1,7 +1,10 @@
-export default function Home() {
+import type React from "react";
+import { SponsorsSection } from "@/components/sponsors-section";
+
+export default function SponsorsPage(): React.JSX.Element {
   return (
-    <div className="bg-pink text-white text-4xl font-bold flex items-center justify-center min-h-screen">
-      <p className="animate-bounce">Octopink25 Kick Off !!</p>
-    </div>
+    <main>
+      <SponsorsSection />
+    </main>
   );
 }
