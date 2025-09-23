@@ -1,12 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pink: #F8598F; 
-  --color-white: #FFFFFF;
+  --color-pink: #f8598f;
+  --color-white: #ffffff;
   --color-text: #424242;
 }
 
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.1em;
+}
+
+.vertical-text-outline {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.1em;
+  color: white;
+  -webkit-text-stroke: 3px #f8598f; 
+}
+
+.text-stroke{
+  -webkit-text-stroke-width:2px;
+  -webkit-text-stroke-color:#F8598F
+}
 
 @layer base {
-
 }
