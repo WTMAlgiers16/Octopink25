@@ -4,53 +4,50 @@ import { organizersData, Organizer } from '@/data/organizers-data';
 
 export default function OrganizersSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Title */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold text-pink mb-8 sm:mb-12 lg:mb-16">
-          Organizers
-        </h2>
+    <section className="section-wrapper">
+      {/* Title */}
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
+        Organizers
+      </h2>
 
-        {/* Organizers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {organizersData.map((organizer: Organizer) => (
-            <div 
-              key={organizer.id}
-              className="bg-white rounded-2xl p-6 sm:p-8 border-2 border-pink shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              {/* Logo */}
-              <div className="flex justify-center mb-6">
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
-                  <Image
-                    src={organizer.logo}
-                    alt="Organizer Logo"
-                    fill
-                    sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
-                    className="object-contain"
-                  />
-                </div>
+      {/* Organizers Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        {organizersData.map((organizer: Organizer) => (
+          <div 
+            key={organizer.id}
+            className="bg-white rounded-2xl p-4 sm:p-6 border-2 border-pink shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            {/* Logo */}
+            <div className="flex justify-center mb-4">
+              <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
+                <Image
+                  src={organizer.logo}
+                  alt="Organizer Logo"
+                  fill
+                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
+                  className="object-contain"
+                />
               </div>
-
-          
-              {/* Description */}
-              <p className="text-text text-center leading-relaxed text-sm sm:text-base mb-4">
-                {organizer.description}
-              </p>
-
-              {/* Why Octopink Section (if exists) */}
-              {organizer.whyOctopink && (
-                <div className="mt-6 pt-4 border-t border-pink-100">
-                  <h4 className="text-sm sm:text-base font-bold text-pink text-center mb-3">
-                    Why octopink ?
-                  </h4>
-                  <p className="text-text text-center leading-relaxed text-sm sm:text-base">
-                    {organizer.whyOctopink}
-                  </p>
-                </div>
-              )}
             </div>
-          ))}
-        </div>
+
+            {/* Description */}
+            <p className="text-text text-center leading-relaxed body-large mb-4">
+              {organizer.description}
+            </p>
+
+            {/* Why Octopink Section (if exists) */}
+            {organizer.whyOctopink && (
+              <div className="mt-4 pt-3 border-t border-pink-100">
+                <h4 className="body-small font-bold text-pink text-center mb-3">
+                  Why octopink ?
+                </h4>
+                <p className="text-text text-center leading-relaxed body-small">
+                  {organizer.whyOctopink}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

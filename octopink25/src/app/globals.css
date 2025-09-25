@@ -6,6 +6,10 @@
   --color-text: #424242;
 }
 
+/* =============================================================================
+   EXISTING CUSTOM STYLES (PRESERVED)
+   ============================================================================= */
+
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -19,13 +23,156 @@
   transform: rotate(180deg);
   letter-spacing: 0.1em;
   color: white;
-  -webkit-text-stroke: 3px #f8598f; 
+  -webkit-text-stroke: 2px #f8598f; /* Reduced from 3px */
 }
 
-.text-stroke{
-  -webkit-text-stroke-width:2px;
-  -webkit-text-stroke-color:#F8598F
+.text-stroke {
+  -webkit-text-stroke-width: 1px; /* Reduced from 2px */
+  -webkit-text-stroke-color: #F8598F;
 }
 
-@layer base {
+/* =============================================================================
+   STANDARDIZED RESPONSIVE TEXT SIZING SYSTEM (REDUCED SIZES)
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   HERO/MAIN TITLES (like "EVENT AGENDA", "Detecting Breast Cancer with AI")
+   --------------------------------------------------------------------------- */
+.hero-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl; /* Reduced from 4xl/5xl/7xl/8xl */
+}
+
+.hero-title-large {
+  @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl; /* Reduced from 5xl/6xl/8xl/9xl */
+}
+
+/* ---------------------------------------------------------------------------
+   SECTION TITLES (like "Our Objectives", "Our Sponsors", "What is Octopink?")
+   --------------------------------------------------------------------------- */
+.section-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-4xl; /* Reduced from 3xl/4xl/5xl/6xl */
+}
+
+/* ---------------------------------------------------------------------------
+   SUBSECTION TITLES (like "How it works", "Benefits", "Our Mission")
+   --------------------------------------------------------------------------- */
+.subsection-title {
+  @apply text-lg sm:text-xl lg:text-2xl xl:text-2xl; /* Reduced from xl/2xl/3xl/4xl */
+}
+
+/* ---------------------------------------------------------------------------
+   CARD/ITEM TITLES (like objective titles, organizer names)
+   --------------------------------------------------------------------------- */
+.card-title {
+  @apply text-lg sm:text-xl lg:text-xl; /* Reduced from xl/2xl/3xl */
+}
+
+/* ---------------------------------------------------------------------------
+   BODY TEXT - LARGE (like main descriptions, important content)
+   --------------------------------------------------------------------------- */
+.body-large {
+  @apply text-base sm:text-lg lg:text-lg; /* Reduced from lg/xl/2xl */
+}
+
+/* ---------------------------------------------------------------------------
+   BODY TEXT - REGULAR (like regular descriptions, paragraph content)
+   --------------------------------------------------------------------------- */
+.body-regular {
+  @apply text-sm sm:text-base lg:text-base; /* Reduced from base/lg/xl */
+}
+
+/* ---------------------------------------------------------------------------
+   BODY TEXT - SMALL (like secondary information, captions)
+   --------------------------------------------------------------------------- */
+.body-small {
+  @apply text-xs sm:text-sm; /* Reduced from sm/base */
+}
+
+/* ---------------------------------------------------------------------------
+   TIME/DATE TEXT (like agenda times)
+   --------------------------------------------------------------------------- */
+.time-text {
+  @apply text-base sm:text-lg lg:text-lg; /* Reduced from lg/xl/2xl */
+}
+
+/* ---------------------------------------------------------------------------
+   NAVIGATION/UI TEXT (like buttons, labels)
+   --------------------------------------------------------------------------- */
+.ui-text {
+  @apply text-xs sm:text-sm; /* Reduced from sm/base */
+}
+
+.ui-text-large {
+  @apply text-sm sm:text-base; /* Reduced from base/lg */
+}
+
+/* ---------------------------------------------------------------------------
+   VERTICAL TEXT (like "EVENT AGENDA" vertical text)
+   --------------------------------------------------------------------------- */
+.vertical-text-large {
+  @apply text-5xl lg:text-7xl xl:text-9xl; /* Reduced from 6xl/7xl/8xl */
+}
+
+/* ---------------------------------------------------------------------------
+   LAYOUT CONTAINERS (REDUCED PADDING)
+   --------------------------------------------------------------------------- */
+.section-container {
+  @apply px-2 sm:px-4 lg:px-6 max-w-7xl mx-auto; /* Reduced from px-4/6/8 */
+}
+
+.section-container-narrow {
+  @apply px-2 sm:px-4 lg:px-6 max-w-6xl mx-auto; /* Reduced from px-4/6/8 */
+}
+
+.section-container-wide {
+  @apply px-2 sm:px-4 lg:px-6 max-w-screen-2xl mx-auto; /* Reduced from px-4/6/8 */
+}
+
+/* ---------------------------------------------------------------------------
+   SPACING UTILITIES (REDUCED PADDING/MARGINS)
+   --------------------------------------------------------------------------- */
+.section-spacing {
+  @apply py-6 sm:py-8 lg:py-10 xl:py-12; /* Reduced from py-12/16/20/24 */
+}
+
+.section-spacing-large {
+  @apply py-8 sm:py-10 lg:py-12 xl:py-14; /* Reduced from py-16/20/24/28 */
+}
+
+.section-spacing-small {
+  @apply py-4 sm:py-6 lg:py-8 xl:py-10; /* Reduced from py-8/12/16/20 */
+}
+
+/* ---------------------------------------------------------------------------
+   TITLE SPACING UTILITIES (REDUCED MARGINS)
+   --------------------------------------------------------------------------- */
+.section-title-spacing {
+  @apply mb-8 sm:mb-10 lg:mb-12 xl:mb-14; /* Reduced from mb-8/12/16/20 */
+}
+
+.section-title-spacing-large {
+  @apply mb-6 sm:mb-8 lg:mb-10 xl:mb-12; /* Reduced from mb-12/16/20/24 */
+}
+
+.section-title-spacing-small {
+  @apply mb-3 sm:mb-4 lg:mb-6 xl:mb-8; /* Reduced from mb-6/8/12/16 */
+}
+
+/* ---------------------------------------------------------------------------
+   COMBINED SECTION WRAPPERS (REDUCED PADDING)
+   --------------------------------------------------------------------------- */
+.section-wrapper {
+  @apply px-6 sm:px-8 lg:px-10 max-w-7xl mx-auto py-24 sm:py-24 lg:py-32 xl:py-36 bg-white; /* Reduced padding */
+}
+
+.section-wrapper-gray {
+  @apply px-2 sm:px-4 lg:px-6 max-w-7xl mx-auto py-6 sm:py-8 lg:py-10 xl:py-12 bg-gray-50; /* Reduced padding */
+}
+
+.section-wrapper-large {
+  @apply px-2 sm:px-4 lg:px-6 max-w-7xl mx-auto py-8 sm:py-10 lg:py-12 xl:py-14 bg-white; /* Reduced padding */
+}
+
+.section-wrapper-narrow {
+  @apply px-2 sm:px-4 lg:px-6 max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 xl:py-12 bg-white; /* Reduced padding */
 }
