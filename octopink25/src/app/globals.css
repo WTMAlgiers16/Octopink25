@@ -176,3 +176,18 @@
 .section-wrapper-narrow {
   @apply px-2 sm:px-4 lg:px-6 max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 xl:py-12 bg-white; /* Reduced padding */
 }
+
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+   color: white;
+  transition: opacity 0.3s ease;
+}
+
+.group:hover .swiper-button-next,
+.group:hover .swiper-button-prev {
+  opacity: 1;
+}

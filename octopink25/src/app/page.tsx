@@ -5,6 +5,7 @@ import EventAgenda  from "../components/event-agenda"
 import { ObjectivesSection } from "../components/objectives-section";
 import OrganizersSection from '@/components/organizers';
 import AboutOctopink from "@/components/about-octopink";
+import Activities from "@/components/activities-section";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <OrganizersSection />
       <SponsorsSection />
       <AIDetectionSection />
+      <Activities />
       <EventAgenda />
       {/* Other components */}
     </main>
