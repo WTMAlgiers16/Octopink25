@@ -6,11 +6,13 @@ import { ObjectivesSection } from "../components/objectives-section";
 import OrganizersSection from '@/components/organizers';
 import AboutOctopink from "@/components/about-octopink";
 import Activities from "@/components/activities-section";
+import { Header } from "@/components/header";
 
 export default function HomePage() {
   return (
     <main className="">
-      {/* Other components */}
+      
+      <Header/>
       <AboutOctopink/>
       <ObjectivesSection />
       <OrganizersSection />
@@ -18,7 +20,7 @@ export default function HomePage() {
       <AIDetectionSection />
       <Activities />
       <EventAgenda />
-      {/* Other components */}
+      
     </main>
   );
 }

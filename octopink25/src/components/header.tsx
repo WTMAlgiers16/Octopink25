@@ -51,7 +51,7 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     <header className={getHeaderClasses()}>
       <div className="section-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+          
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
               {/* Logo temporaire pour éviter l'erreur 404 */}
@@ -146,3 +146,16 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     </header>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
