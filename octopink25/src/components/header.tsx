@@ -82,13 +82,12 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
       <div className="section-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
-          {/* MODIFIÉ : Logo now scrolls to top */}
+          
           <button 
             onClick={() => handleSmoothScroll("home")} 
             className="flex items-center space-x-3 cursor-pointer"
           >
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
-              {/* MODIFIÉ : Utilise le vrai logo depuis public/images/logo.png */}
               <Image
                 src="/images/logo.png"
                 alt="Octopink Logo"
