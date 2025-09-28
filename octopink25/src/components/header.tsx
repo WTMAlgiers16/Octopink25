@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import Image from "next/image"
 
 interface HeaderProps {
@@ -28,7 +29,21 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
 
   // NOUVELLE FONCTION : Handle smooth scroll to section
   const handleSmoothScroll = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    let element = document.getElementById(sectionId)
+    
+    // NOUVEAU : Fallback pour les sections sans ID - cherche par contenu
+    if (!element) {
+      switch (sectionId) {
+        case 'about':
+          element = document.querySelector('h2')?.closest('section') || null
+          break
+        case 'sponsors':
+          element = document.querySelector('[class*="sponsors"]') || null
+          break
+        // Ajoute d'autres cas si nécessaire
+      }
+    }
+    
     if (element) {
       element.scrollIntoView({ 
         behavior: 'smooth',
@@ -73,12 +88,14 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
             className="flex items-center space-x-3 cursor-pointer"
           >
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
-              <div 
-                className="w-full h-full rounded-lg flex items-center justify-center"
-                style={{ backgroundColor: 'var(--color-pink)' }}
-              >
-                <span className="text-white font-bold text-sm lg:text-base">O</span>
-              </div>
+              {/* MODIFIÉ : Utilise le vrai logo depuis public/images/logo.png */}
+              <Image
+                src="/images/logo.png"
+                alt="Octopink Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span 
