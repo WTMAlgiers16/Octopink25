@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import Image from "next/image"
 
 interface HeaderProps {
@@ -27,11 +26,9 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  // NOUVELLE FONCTION : Handle smooth scroll to section
   const handleSmoothScroll = (sectionId: string) => {
     let element = document.getElementById(sectionId)
     
-    // NOUVEAU : Fallback pour les sections sans ID - cherche par contenu
     if (!element) {
       switch (sectionId) {
         case 'about':
@@ -40,7 +37,6 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
         case 'sponsors':
           element = document.querySelector('[class*="sponsors"]') || null
           break
-        // Ajoute d'autres cas si nécessaire
       }
     }
     
@@ -50,7 +46,6 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
         block: 'start'
       })
     }
-    // NOUVEAU : Ferme le menu mobile après clic
     setIsMenuOpen(false)
   }
 
@@ -65,9 +60,8 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     return `${baseClasses} ${variantClasses[variant]} ${scrollClasses} ${className}`
   }
 
-  // MODIFIÉ : Navigation items now use section IDs instead of routes
   const navigationItems = [
-    { sectionId: "home", label: "Home" }, // NOUVEAU : sectionId au lieu de href
+    { sectionId: "home", label: "Home" }, 
     { sectionId: "about", label: "About" },
     { sectionId: "awareness", label: "Awareness" },
     { sectionId: "organizers", label: "Organizers" },
@@ -85,9 +79,9 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
           
           <button 
             onClick={() => handleSmoothScroll("home")} 
-            className="flex items-center space-x-3 cursor-pointer"
+            className="flex flex-col items-center space-y-1 cursor-pointer"
           >
-            <div className="relative w-10 h-10 lg:w-12 lg:h-12">
+            <div className="relative w-14 h-14 lg:w-20 lg:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Octopink Logo"
@@ -98,15 +92,14 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
             </div>
             <div className="flex flex-col">
               <span 
-                className="font-bold text-xl lg:text-2xl"
+                className="font-bold text-xs lg:text-sm"
                 style={{ color: 'var(--color-pink)' }}
               >
-                OCTOPINK
+                
               </span>
             </div>
           </button>
 
-          {/* MODIFIÉ : Desktop Navigation now uses buttons with smooth scroll */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
             {navigationItems.map((item) => (
               <button
@@ -124,7 +117,7 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
+          
           <button
             onClick={toggleMenu}
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
@@ -157,7 +150,6 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
           </button>
         </div>
 
-        {/* MODIFIÉ : Mobile Navigation now uses buttons with smooth scroll */}
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}>
@@ -166,7 +158,7 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
               {navigationItems.map((item) => (
                 <button
                   key={item.sectionId}
-                  onClick={() => handleSmoothScroll(item.sectionId)} // NOUVEAU : onClick au lieu de Link
+                  onClick={() => handleSmoothScroll(item.sectionId)} 
                   className="nav-link-mobile text-left cursor-pointer"
                 >
                   {item.label}
