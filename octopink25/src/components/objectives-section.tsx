@@ -9,7 +9,7 @@ import { objectivesData, type ObjectiveItem } from "../data/objectives-data";
  */
 export function ObjectivesSection(): React.JSX.Element {
   return (
-    <section className="section-wrapper">
+    <section id="objectives"className="section-wrapper">
       {/* Section Title */}
       <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Our Objectives

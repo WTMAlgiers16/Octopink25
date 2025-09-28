@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import Image from "next/image"
 
 interface HeaderProps {
@@ -27,6 +26,19 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  // NOUVELLE FONCTION : Handle smooth scroll to section
+  const handleSmoothScroll = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    // NOUVEAU : Ferme le menu mobile après clic
+    setIsMenuOpen(false)
+  }
+
   const getHeaderClasses = () => {
     const baseClasses = "fixed top-0 w-full z-50 transition-all duration-300"
     const variantClasses = {
@@ -38,13 +50,16 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     return `${baseClasses} ${variantClasses[variant]} ${scrollClasses} ${className}`
   }
 
+  // MODIFIÉ : Navigation items now use section IDs instead of routes
   const navigationItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/awareness", label: "Awareness" },
-    { href: "/organizers", label: "Organizers" },
-    { href: "/sponsors", label: "Sponsors" },
-    { href: "/activities", label: "Activities & Agenda" },
+    { sectionId: "home", label: "Home" }, // NOUVEAU : sectionId au lieu de href
+    { sectionId: "about", label: "About" },
+    { sectionId: "awareness", label: "Awareness" },
+    { sectionId: "organizers", label: "Organizers" },
+    { sectionId: "sponsors", label: "Sponsors" },
+    { sectionId: "activities", label: "Activities & Agenda" },
+    { sectionId: "objectives", label: "Objectives" },
+
   ]
 
   return (
@@ -52,9 +67,12 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
       <div className="section-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
-          <Link href="/" className="flex items-center space-x-3">
+          {/* MODIFIÉ : Logo now scrolls to top */}
+          <button 
+            onClick={() => handleSmoothScroll("home")} 
+            className="flex items-center space-x-3 cursor-pointer"
+          >
             <div className="relative w-10 h-10 lg:w-12 lg:h-12">
-              {/* Logo temporaire pour éviter l'erreur 404 */}
               <div 
                 className="w-full h-full rounded-lg flex items-center justify-center"
                 style={{ backgroundColor: 'var(--color-pink)' }}
@@ -70,15 +88,15 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
                 OCTOPINK
               </span>
             </div>
-          </Link>
+          </button>
 
-          {/* Desktop Navigation */}
+          {/* MODIFIÉ : Desktop Navigation now uses buttons with smooth scroll */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
             {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="nav-link relative group"
+              <button
+                key={item.sectionId}
+                onClick={() => handleSmoothScroll(item.sectionId)} // NOUVEAU : onClick au lieu de Link
+                className="nav-link relative group cursor-pointer"
                 style={{ color: 'var(--color-text)' }}
               >
                 {item.label}
@@ -86,7 +104,7 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
                   className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
                   style={{ backgroundColor: 'var(--color-pink)' }}
                 ></span>
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -123,21 +141,20 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* MODIFIÉ : Mobile Navigation now uses buttons with smooth scroll */}
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}>
           <nav className="py-4 border-t border-gray-200 bg-white">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="nav-link-mobile"
-                  onClick={() => setIsMenuOpen(false)}
+                <button
+                  key={item.sectionId}
+                  onClick={() => handleSmoothScroll(item.sectionId)} // NOUVEAU : onClick au lieu de Link
+                  className="nav-link-mobile text-left cursor-pointer"
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
             </div>
           </nav>
@@ -146,16 +163,3 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
     </header>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

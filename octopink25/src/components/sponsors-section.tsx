@@ -5,7 +5,7 @@ import { sponsorsData, type SponsorItem } from "../data/sponsors-data";
 
 export function SponsorsSection(): React.JSX.Element {
   return (
-    <section className="section-wrapper">
+    <section id="sponsors" className="section-wrapper">
       <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Our Sponsors
       </h2>
