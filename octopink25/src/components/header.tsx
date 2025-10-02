@@ -4,6 +4,12 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
+/**
+ * Header component with smooth scroll navigation
+ * Includes responsive mobile menu and scroll detection
+ * Uses 'use client' for state management and event listeners
+ */
+
 interface HeaderProps {
   className?: string
   variant?: "default" | "transparent"
@@ -61,14 +67,13 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
   }
 
   const navigationItems = [
-    { sectionId: "home", label: "Home" }, 
     { sectionId: "about", label: "About" },
-    { sectionId: "awareness", label: "Awareness" },
+    { sectionId: "objectives", label: "Objectives" },
     { sectionId: "organizers", label: "Organizers" },
     { sectionId: "sponsors", label: "Sponsors" },
-    { sectionId: "activities", label: "Activities & Agenda" },
-    { sectionId: "objectives", label: "Objectives" },
-
+    { sectionId: "detection", label: "AI Detection" },
+    { sectionId: "activities", label: "Activities" },
+    { sectionId: "agenda", label: "Agenda" },
   ]
 
   return (
@@ -76,9 +81,8 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
       <div className="section-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
-          
           <button 
-            onClick={() => handleSmoothScroll("home")} 
+            onClick={() => handleSmoothScroll("about")} 
             className="flex flex-col items-center space-y-1 cursor-pointer"
           >
             <div className="relative w-14 h-14 lg:w-20 lg:h-20">
@@ -90,34 +94,23 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span 
-                className="font-bold text-xs lg:text-sm"
-                style={{ color: 'var(--color-pink)' }}
-              >
-                
-              </span>
-            </div>
           </button>
 
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
             {navigationItems.map((item) => (
               <button
                 key={item.sectionId}
-                onClick={() => handleSmoothScroll(item.sectionId)} // NOUVEAU : onClick au lieu de Link
-                className="nav-link relative group cursor-pointer"
-                style={{ color: 'var(--color-text)' }}
+                onClick={() => handleSmoothScroll(item.sectionId)}
+                className="nav-link relative group cursor-pointer text-text hover:text-pink"
               >
                 {item.label}
-                <span 
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
-                  style={{ backgroundColor: 'var(--color-pink)' }}
-                ></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
 
-          
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
@@ -126,30 +119,25 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
           >
             <div className="space-y-1.5">
               <span 
-                className="block w-6 h-0.5 transition-all duration-300"
-                style={{ 
-                  backgroundColor: 'var(--color-text)',
-                  transform: isMenuOpen ? 'rotate(45deg) translateY(8px)' : 'none'
-                }}
+                className={`block w-6 h-0.5 bg-text transition-all duration-300 ${
+                  isMenuOpen ? 'rotate-45 translate-y-2' : ''
+                }`}
               />
               <span 
-                className="block w-6 h-0.5 transition-all duration-300"
-                style={{ 
-                  backgroundColor: 'var(--color-text)',
-                  opacity: isMenuOpen ? 0 : 1
-                }}
+                className={`block w-6 h-0.5 bg-text transition-all duration-300 ${
+                  isMenuOpen ? 'opacity-0' : 'opacity-100'
+                }`}
               />
               <span 
-                className="block w-6 h-0.5 transition-all duration-300"
-                style={{ 
-                  backgroundColor: 'var(--color-text)',
-                  transform: isMenuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none'
-                }}
+                className={`block w-6 h-0.5 bg-text transition-all duration-300 ${
+                  isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                }`}
               />
             </div>
           </button>
         </div>
 
+        {/* Mobile Navigation */}
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}>
