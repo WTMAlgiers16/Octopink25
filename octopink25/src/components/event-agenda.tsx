@@ -4,7 +4,7 @@ import { agendaData, AgendaItem, AgendaDay } from '@/data/agenda-data';
 
 export default function EventAgenda() {
   return (
-    <div className="max-w-7xl lg:w-fit mx-auto px-4 sm:px-6 py-24 bg-white">
+    <div id="agenda"className="max-w-7xl lg:w-fit mx-auto px-4 sm:px-6 py-24 bg-white">
       
       {/* Mobile Layout - stacked vertically */}
       <div className="block lg:hidden">

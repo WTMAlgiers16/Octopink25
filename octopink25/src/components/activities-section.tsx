@@ -14,7 +14,7 @@ import { activities } from '@/data/activities-data';
 // =========================
 export default function Activities() {
   return (
-    <section className="section-wrapper">
+    <section id="activities" className="section-wrapper">
       {/* Title */}
       <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Activities
