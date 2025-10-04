@@ -6,16 +6,16 @@ export default function OrganizersSection() {
   return (
     <section id="organizers"className="section-wrapper">
       {/* Title */}
-      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink animate-fade-in-up">
         Organizers
       </h2>
 
       {/* Organizers Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
-        {organizersData.map((organizer: Organizer) => (
+        {organizersData.map((organizer: Organizer, index) => (
           <div 
             key={organizer.id}
-            className="bg-white rounded-2xl p-4 sm:p-6 border-2 border-pink shadow-sm hover:shadow-md transition-shadow duration-300"
+            className={`bg-white rounded-2xl p-4 sm:p-6 border-2 border-pink shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up stagger-${index + 2} hover-scale`}
           >
             {/* Logo */}
             <div className="flex justify-center mb-4">

@@ -85,7 +85,7 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
             onClick={() => handleSmoothScroll("about")} 
             className="flex flex-col items-center space-y-1 cursor-pointer"
           >
-            <div className="relative w-14 h-14 lg:w-20 lg:h-20">
+            <div className="relative w-14 h-14 lg:w-20 lg:h-20 hover-scale">
               <Image
                 src="/images/logo.png"
                 alt="Octopink Logo"

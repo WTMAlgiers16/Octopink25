@@ -11,16 +11,16 @@ export function ObjectivesSection(): React.JSX.Element {
   return (
     <section id="objectives"className="section-wrapper">
       {/* Section Title */}
-      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink animate-fade-in-up">
         Our Objectives
       </h2>
 
       {/* Objectives Grid */}
       <div className="grid max-w-6xl mx-auto grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-3">
         {objectivesData.map((objective: ObjectiveItem, index: number) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div key={index} className={`flex flex-col items-center text-center animate-fade-in-up hover-scale stagger-${index + 2}`}>
             {/* Icon Container */}
-            <div className="mb-6 flex h-24 lg:h-32 items-end justify-center">
+            <div className="mb-6 flex h-24 lg:h-32 items-end justify-center hover-scale">
               <Image
                 src={objective.iconSrc}
                 alt={`${objective.title} icon`}
