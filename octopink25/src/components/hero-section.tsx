@@ -1,37 +1,35 @@
-import Image from "next/image"; // 1. React and Next.js imports 
+import Image from "next/image";
 
-import Button from "./button"; // 4. Relative imports 
-import PartialImage from "./partialImage"; // 4. Relative imports 
+import Button from "./button";
+import PartialImage from "./partialImage";
 
-export default function Hero() { // Component Name is PascalCase (Hero) and uses a function declaration [cite: 47, 62]
+export default function Hero() {  
   return (
-    <section className="w-full bg-pink-500">
-      <div className="relative flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px] ">
-
-
+    <section className="w-full bg-pink relative">
+      <div className="relative flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px]">
+        
         {/* Text Section */}
-        <div className="absolute inset-0 z-10 flex flex-col text-center items-center justify-around p-6
-                        text-white lg:static lg:flex-1 lg:bg-transparent">
+        <div className="flex flex-col text-center items-center justify-around p-6 text-white flex-1">
           {/* Title */}
           <div>
             <div className="flex flex-row justify-center items-baseline gap-2">
-              <p className="hero-title-large font-bold text-3xl sm:text-4xl md:text-5xl">Octopink</p>
-              <p className="section-title text-xl sm:text-2xl md:text-3xl">2025</p>
+              <p className="hero-title-large font-bold ">Octopink</p>
+              <p className="section-title ">2025</p>
             </div>
-            <div className="subsection-title opacity-80 font-normal text-center mt-2 text-sm sm:text-base md:text-lg">
+            <div className="subsection-title opacity-80 font-normal text-center mt-2 ">
               <p>A Collaborative Initiative Against Breast Cancer</p>
             </div>
           </div>
 
           {/* Event Info */}
-          <div className="flex  gap-4 flex-row justify-around items-center mt-4 text-sm sm:text-base">
+          <div className="flex gap-4 flex-row justify-around items-center mt-4 ">
             <div className="flex flex-col text-center">
               <div className="font-bold time-text">Oct, 15th & 18th</div>
               <div>ESI Algiers</div>
             </div>
 
-            <div className="hidden sm:block w-1 bg-white mx-6 flex-shrink-0"></div>
-
+            <div className=" w-px h-full bg-white mx-6 flex-shrink-0 "></div>
+            
             <div className="flex flex-col text-center">
               <div className="font-bold time-text">Oct, 25th</div>
               <div>Faculty of Medicine of Ziania</div>
@@ -40,67 +38,106 @@ export default function Hero() { // Component Name is PascalCase (Hero) and uses
 
           {/* CTA Buttons */}
           <div className="flex flex-row justify-center gap-3 mt-6">
-            <Button text="join me!" bgColor="white" textColor="#F8598F"  border borderColor="white" />
-            <Button text="learn more" bgColor="#FF80AB" textColor="white" border borderColor="white" />
+            <Button 
+              text="join me!" 
+              className="bg-white text-[#F8598F] border-white" 
+              border 
+            />
+
+            <Button 
+              text="learn more" 
+              className="bg-[#FF80AB] text-white border-white" 
+              border 
+            />
           </div>
-
-
         </div>
-        {/* Image Section */}
-        <div className="relative flex-2 ">
+
+        {/* woman and ribbon Image Section */}
+        <div className="flex-2 relative hidden lg:block">
           <Image
             src="/images/hero/woman.png"
             alt="hero"
             fill
-            className="object-contain object-bottom-left lg:object-bottom"
+            className="object-contain object-bottom"
             priority
           />
-            <Image
+          <Image
             src="/images/hero/rubon1.png"
             alt="ribbon"
             width={500}
             height={500}
-            className="absolute mx-auto bottom-0 z-10 pointer-events-none -mb-20 hidden lg:block"
+            className="absolute mx-auto bottom-0 z-10 pointer-events-none -mb-20"
           />
-          {/* Overlay only on small screens */}
-          <div className="absolute inset-0  lg:hidden"></div>
         </div>
-      </div>
 
+        {/* decoration for small screens */}
+        <div className="absolute inset-0 lg:hidden flex justify-between  overflow-hidden">
+          {/* Top Left Flower */}
+        
+            <div className="relative z-0 flex  h-[150px] w-[150px] md:h-[270px] md:w-[270px] items-start">
+                     <PartialImage
+                       src="/images/footer/flower3.png"
+                       alt="flower"
+                       className="object-cover h-full w-full -mt-10"
+                       hiddenPercent={37}
+                       side="left"
+                     />
+                   </div>
+           
+                  
+          
 
-      <div className="z-10 absolute inset-0 lg:flex  pointer-events-none  hidden">
-
-        <PartialImage
-          src="/images/footer/flower3.png"
-          alt="flower"
-          className="h-[200px] w-[200px] object-cover mx-auto"
-          hiddenPercent={40}
-          side="top"
-        />
-
-
-        <div className="flex flex-col absolute inset-0 right-0 h-full overflow-hidden min-h-[500px] sm:min-h-[600px] ">
-
-          <div className="h-[300px] w-auto flex justify-end  ">
+          {/* Bottom Right Flower */}
+          <div className=" bottom-0 right-0  flex items-end">
+            
             <PartialImage
               src="/images/footer/flower2.png"
-              alt="flower"
-              className="object-contain z-20 -mt-10"
-              hiddenPercent={40}
-              side="right"
-            />
-          </div>
-          <div className="h-[300px] w-auto flex justify-end ">
-            <PartialImage
-              src="/images/hero/flower2.png"
-              alt="flower"
-              className=" object-contain z-30 object-bottom"
+              alt="flower bottom right"
+              className="w-[200px] h-[200px] md:h-[350px] md:w-[350px] object-cover z-0 -mb-22"
               hiddenPercent={50}
               side="right"
             />
           </div>
         </div>
 
+      </div>
+
+      {/* Decorative Flowers for Large Screens */}
+      <div className="absolute inset-0 lg:flex pointer-events-none hidden">
+        <PartialImage
+          src="/images/footer/flower3.png"
+          alt="flower"
+          className="h-[200px] w-[200px] mx-auto"
+          width={200}
+          height={200}
+          hiddenPercent={40}
+          side="top"
+        />
+
+        <div className="flex flex-col absolute inset-0 right-0 h-full overflow-hidden min-h-[500px] sm:min-h-[600px]">
+          <div className="h-[300px] w-auto flex justify-end">
+            <PartialImage
+              src="/images/footer/flower2.png"
+              alt="flower"
+              className="z-20 -mt-10 h-[300px] w-auto"
+              width={300}
+              height={300}
+              hiddenPercent={40}
+              side="right"
+            />
+          </div>
+          <div className="h-[300px] w-auto flex justify-end">
+            <PartialImage
+              src="/images/hero/flower2.png"
+              alt="flower"
+              className="z-30 h-[300px] w-auto"
+              width={300}
+              height={300}
+              hiddenPercent={50}
+              side="right"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
