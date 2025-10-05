@@ -21,7 +21,7 @@ export const awarenessData: AwarenessReason[] = [
     subText: "women",
     description: "diagnosed each \n year",
     image: {
-      src: "/images/awareness/pic45.png",
+      src: "/images/awareness/Group 44.svg",
 
       mobileClassName:
         "absolute left-1/2 -translate-x-1/2 w-70 sm:w-80 pointer-events-none",
@@ -37,7 +37,7 @@ export const awarenessData: AwarenessReason[] = [
     subText: "new cases",
     description: "diagnosed each \n year",
     image: {
-      src: "/images/awareness/pic3.png",
+      src: "/images/awareness/pic3.svg",
       
      mobileClassName:
   "absolute left-1/2 -translate-x-1/2 w-48 sm:w-48 pointer-events-none opacity-10",

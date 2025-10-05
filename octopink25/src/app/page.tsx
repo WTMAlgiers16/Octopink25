@@ -8,7 +8,7 @@ import AwarenessSection from "@/components/awareness-section";
 
 export default function HomePage() {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className="">
       {/* Other components */}
       <ObjectivesSection />
       <AwarenessSection/>
