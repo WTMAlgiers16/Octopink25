@@ -9,7 +9,7 @@ export function AIDetectionSection(): React.JSX.Element {
   const data = getBreastCancerData();
 
   return (
-    <section className="section-wrapper">
+    <section id="detection" className="section-wrapper">
       {/* Header Section */}
       <div className="text-center section-title-spacing">
         <h1 className="font-bold section-title text-pink mb-4 leading-tight">

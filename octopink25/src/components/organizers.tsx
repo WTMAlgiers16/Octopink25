@@ -4,7 +4,7 @@ import { organizersData, Organizer } from '@/data/organizers-data';
 
 export default function OrganizersSection() {
   return (
-    <section className="section-wrapper">
+    <section id="organizers"className="section-wrapper">
       {/* Title */}
       <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Organizers

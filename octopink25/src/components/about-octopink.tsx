@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutOctopink() {
   return (
-    <section className="section-wrapper">
+    <section id="about" className="section-wrapper">
       {/* Title */}
       <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         What is Octopink?

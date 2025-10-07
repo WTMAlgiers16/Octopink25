@@ -8,6 +8,7 @@ import AboutOctopink from "@/components/about-octopink";
 import Activities from "@/components/activities-section";
 import Hero from "@/components/hero-section";
 import Footer from "@/components/footer-section";
+import { Header } from "@/components/header";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
       <EventAgenda />
       <Footer />
       {/* Other components */}
+      
     </main>
   );
 }
