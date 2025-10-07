@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const productSans = localFont({
@@ -42,10 +43,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${productSans.className}`}
-      >
-        {children}
+      <body className={`${productSans.className}`}>
+        <Header />
+        <main className="pt-16 lg:pt-20">
+          {children}
+        </main>
       </body>
     </html>
   );

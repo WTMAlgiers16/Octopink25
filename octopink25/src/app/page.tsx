@@ -5,20 +5,29 @@ import EventAgenda  from "../components/event-agenda"
 import { ObjectivesSection } from "../components/objectives-section";
 import OrganizersSection from '@/components/organizers';
 import AwarenessSection from "@/components/awareness-section";
+import AboutOctopink from "@/components/about-octopink";
+import Activities from "@/components/activities-section";
+import Hero from "@/components/hero-section";
+import Footer from "@/components/footer-section";
+import { Header } from "@/components/header";
 
 export default function HomePage() {
   return (
     <main className="">
       {/* Other components */}
+      <Hero />
+      <AboutOctopink/>
       <ObjectivesSection />
       <AwarenessSection/>
       <AIDetectionSection />
       <OrganizersSection />
-      <SponsorsSection />
-      
+      <SponsorsSection />      
+      <AIDetectionSection />
+      <Activities />
       <EventAgenda />
-      
+      <Footer />
       {/* Other components */}
+      
     </main>
   );
 }

@@ -9,38 +9,35 @@ import { objectivesData, type ObjectiveItem } from "../data/objectives-data";
  */
 export function ObjectivesSection(): React.JSX.Element {
   return (
-    <section className="px-4 py-24 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
+    <section id="objectives"className="section-wrapper">
       {/* Section Title */}
-      <h2 className="mx-auto mb-16 text-center text-4xl font-bold text-pink md:text-5xl lg:text-6xl">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Our Objectives
       </h2>
 
       {/* Objectives Grid */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-3">
+      <div className="grid max-w-6xl mx-auto grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-3">
         {objectivesData.map((objective: ObjectiveItem, index: number) => (
-          <div
-            key={index}
-            className="flex flex-col items-center px-6 text-center"
-          >
+          <div key={index} className="flex flex-col items-center text-center">
             {/* Icon Container */}
-            <div className="mb-8 flex h-32 items-end justify-center">
+            <div className="mb-6 flex h-24 lg:h-32 items-end justify-center">
               <Image
                 src={objective.iconSrc}
                 alt={`${objective.title} icon`}
-                width={index === 2 ? 100 : 132}
-                height={index === 2 ? 100 : 132}
+                width={index === 2 ? 80 : 100}
+                height={index === 2 ? 80 : 100}
                 className="object-contain"
                 priority={index === 0}
               />
             </div>
 
             {/* Title */}
-            <h3 className="mb-4 whitespace-nowrap text-2xl font-bold text-pink md:text-3xl lg:text-4xl">
+            <h3 className="mb-4 whitespace-nowrap card-title font-bold text-pink">
               {objective.title}
             </h3>
 
             {/* Description */}
-            <p className="max-w-sm whitespace-pre-line text-center text-lg leading-relaxed text-text md:text-xl lg:text-2xl">
+            <p className="max-w-sm whitespace-pre-line text-center body-regular leading-relaxed text-text">
               {objective.description}
             </p>
           </div>

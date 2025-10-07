@@ -5,20 +5,20 @@ import { sponsorsData, type SponsorItem } from "../data/sponsors-data";
 
 export function SponsorsSection(): React.JSX.Element {
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8 bg-white">
-      <h2 className="mx-auto mb-12 text-center font-bold text-pink text-4xl sm:text-5xl lg:text-6xl">
+    <section id="sponsors" className="section-wrapper">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
         Our Sponsors
       </h2>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
         {sponsorsData.map((sponsor: SponsorItem) => (
           <div key={sponsor.id} className="flex items-center justify-center">
             <Image
               src={sponsor.logoSrc}
               alt={sponsor.alt}
-              width={300}
-              height={300}
-              className="object-contain w-full h-auto max-w-xs md:max-w-sm"
+              width={240}
+              height={240}
+              className="object-contain w-full h-auto max-w-[200px] md:max-w-[240px]"
               priority={sponsor.id === 1}
             />
           </div>
