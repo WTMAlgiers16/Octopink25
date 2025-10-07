@@ -35,7 +35,7 @@ const AwarenessSection: React.FC = () => {
               {reason.image && (
                 <div className="absolute inset-0 z-0 mt-6 hidden lg:block">
                   <Image
-                    src={reason.image.src}
+                    src={reason.image}
                     alt="decorative background"
                     aria-hidden="true"
                     fill
