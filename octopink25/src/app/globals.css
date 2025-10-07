@@ -162,7 +162,7 @@
    COMBINED SECTION WRAPPERS (REDUCED PADDING)
    --------------------------------------------------------------------------- */
 .section-wrapper {
-  @apply px-6 sm:px-8 lg:px-10 max-w-7xl mx-auto py-24 sm:py-24 lg:py-32 xl:py-36 bg-white; /* Reduced padding */
+  @apply px-6 sm:px-8 lg:px-10 max-w-7xl mx-auto py-24 sm:py-24 lg:py-32 xl:py-36; /* Reduced padding */
 }
 
 .section-wrapper-gray {

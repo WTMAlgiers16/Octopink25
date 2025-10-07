@@ -9,25 +9,21 @@ import AboutOctopink from "@/components/about-octopink";
 import Activities from "@/components/activities-section";
 import Hero from "@/components/hero-section";
 import Footer from "@/components/footer-section";
-import { Header } from "@/components/header";
+
 
 export default function HomePage() {
   return (
-    <main className="">
-      {/* Other components */}
+    <main>
       <Hero />
       <AboutOctopink/>
       <ObjectivesSection />
       <AwarenessSection/>
       <AIDetectionSection />
-      <OrganizersSection />
-      <SponsorsSection />      
-      <AIDetectionSection />
+      <OrganizersSection />    
+      <SponsorsSection />  
       <Activities />
       <EventAgenda />
       <Footer />
-      {/* Other components */}
-      
     </main>
   );
 }

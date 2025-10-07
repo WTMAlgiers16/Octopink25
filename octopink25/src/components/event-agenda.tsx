@@ -9,7 +9,7 @@ export default function EventAgenda() {
       {/* Mobile Layout - stacked vertically */}
       <div className="block lg:hidden">
         {/* Mobile Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <h1 className="section-title font-bold text-pink">EVENT <span className="section-title font-bold text-stroke text-white">AGENDA</span></h1>
 
         </div>
@@ -17,7 +17,7 @@ export default function EventAgenda() {
         {/* Mobile Content */}
         <div className="space-y-6">
           {agendaData.map((dayData: AgendaDay, dayIndex: number) => (
-            <div key={dayIndex} className="border-l-4 border-pink pl-4">
+            <div key={dayIndex} className="border-l-4 border-pink pl-4 animate-fade-in-up stagger-${dayIndex + 2}">
               
               {/* Date Section */}
               <div className="flex items-baseline gap-2 mb-3">
@@ -53,10 +53,10 @@ export default function EventAgenda() {
         
         {/* Left Side - EVENT AGENDA Text */}
         <div className="flex justify-center items-center flex-shrink-0">
-          <div className="vertical-text-large font-bold text-pink whitespace-nowrap vertical-text">
+          <div className="vertical-text-large font-bold text-pink whitespace-nowrap vertical-text animate-fade-in">
             EVENT
           </div>
-          <div className="vertical-text-large font-bold whitespace-nowrap mt-2 vertical-text-outline">
+          <div className="vertical-text-large font-bold whitespace-nowrap mt-2 vertical-text-outline animate-fade-in stagger-2">
             AGENDA
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function EventAgenda() {
         {/* Right Side - Content Area */}
         <div className="w-fit min-w-0 ml-20">
           {agendaData.map((dayData: AgendaDay, dayIndex: number) => (
-            <div key={dayIndex} className="relative mb-6 lg:mb-8 last:mb-0">
+            <div key={dayIndex} className="relative mb-6 lg:mb-8 last:mb-0 animate-fade-in-up stagger-${dayIndex + 3}">
               
               <div className="flex gap-4">
                 

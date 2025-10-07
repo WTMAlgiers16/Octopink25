@@ -5,7 +5,7 @@ export default function AboutOctopink() {
   return (
     <section id="about" className="section-wrapper">
       {/* Title */}
-      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink animate-fade-in-up">
         What is Octopink?
       </h2>
       
@@ -16,7 +16,7 @@ export default function AboutOctopink() {
         <div className="space-y-8 lg:space-y-10 order-2 lg:order-1">
           {/* What is Octopink Section */}
           <div className="text-center lg:text-left">
-            <p className="text-text leading-relaxed body-large">
+            <p className="text-text leading-relaxed body-large animate-fade-in-up stagger-2">
               Octopink is an academic and creative initiative 
               designed to bring together curious young minds 
               passionate about science, technology, and 
@@ -27,7 +27,7 @@ export default function AboutOctopink() {
           </div>
 
           {/* Our Mission Section */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left animate-fade-in-up stagger-2">
             <h3 className="subsection-title font-bold text-pink mb-4">
               Our Mission
             </h3>
@@ -40,7 +40,7 @@ export default function AboutOctopink() {
         </div>
 
         {/* Right Image */}
-        <div className="relative aspect-square h-96 order-1 lg:order-2 justify-self-end hidden lg:block">
+        <div className="relative aspect-square h-96 order-1 lg:order-2 justify-self-end hidden lg:block animate-fade-in-up stagger-4">
           <Image
             src='./images/about-octopink-flower.svg'
             alt="Pink decorative flower representing Octopink initiative"

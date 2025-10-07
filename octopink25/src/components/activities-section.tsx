@@ -16,11 +16,11 @@ export default function Activities() {
   return (
     <section id="activities" className="section-wrapper">
       {/* Title */}
-      <h2 className="section-title section-title-spacing text-center font-bold text-pink">
+      <h2 className="section-title section-title-spacing text-center font-bold text-pink animate-fade-in-up">
         Activities
       </h2>
 
-      <div className="max-w-6xl mx-auto bg-pink/85 rounded-2xl shadow-md h-auto lg:h-[500px] overflow-hidden group">
+      <div className="max-w-6xl mx-auto bg-pink/85 rounded-2xl shadow-md h-auto lg:h-[500px] overflow-hidden group animate-fade-in-up stagger-2">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation

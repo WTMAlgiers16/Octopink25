@@ -39,13 +39,13 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-row justify-center gap-3 mt-6">
             <Button 
-              text="join me!" 
+              text="Join us!" 
               className="bg-white text-[#F8598F] border-white" 
               border 
             />
 
             <Button 
-              text="learn more" 
+              text="Learn more" 
               className="bg-[#FF80AB] text-white border-white" 
               border 
             />
@@ -62,7 +62,7 @@ export default function Hero() {
             priority
           />
           <Image
-            src="/images/hero/rubon1.png"
+            src="/images/hero/ribon1.png"
             alt="ribbon"
             width={500}
             height={500}
