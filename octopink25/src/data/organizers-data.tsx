@@ -19,12 +19,6 @@ export const organizersData: Organizer[] = [
     whyOctopink: "Because AI can play a crucial role in healthcare, and we want to contribute with our technological skills to this cause."
   },
   {
-    id: "utopia",
-    logo:  "/images/organizers/utopia-logo.svg",
-    description: "Bring support, joy, and assistance to sick and underprivileged children.",
-    whyOctopink: "To unite technology and humanitarian values with a common goal: raising awareness and supporting the fight against cancer."
-  },
-  {
     id: "source d'innocence",
     logo:  "/images/organizers/sourire-logo.svg",
     description: "Bring support, joy, and assistance to sick and underprivileged children.",
