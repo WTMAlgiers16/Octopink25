@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Button from "./button";
 import PartialImage from "./partialImage";
@@ -44,7 +45,8 @@ export default function Hero() {
               <Button 
                 text="Join us!" 
                 className="bg-white text-[#F8598F] border-white" 
-                border 
+                border
+                onClick={()=> window.open("https://tripetto.app/run/BBOF4REOPG", "_blank")}  
               />
             </div>
 
@@ -52,7 +54,13 @@ export default function Hero() {
               <Button 
                 text="Learn more" 
                 className="bg-[#FF80AB] text-white border-white" 
-                border 
+                border
+                onClick={() => {
+                  const aboutSection = document.getElementById("about");
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               />
             </div>
           </div>

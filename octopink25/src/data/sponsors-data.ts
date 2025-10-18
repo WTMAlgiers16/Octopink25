@@ -7,22 +7,17 @@ export interface SponsorItem {
 export const sponsorsData: SponsorItem[] = [
   {
     id: 1,
-    logoSrc: "/images/sponsors/wtm-algiers.png",
-    alt: "Sponsor logo",
+    logoSrc: "/images/sponsors/AIESEC.png",
+    alt: "AIESEC",
   },
   {
     id: 2,
-    logoSrc: "/images/sponsors/wtm-algiers.png",
-    alt: "Sponsor logo",
+    logoSrc: "/images/sponsors/ESCCLUB.png",
+    alt: "ESC CLUB",
   },
   {
     id: 3,
-    logoSrc: "/images/sponsors/wtm-algiers.png",
-    alt: "Sponsor logo",
-  },
-  {
-    id: 4,
-    logoSrc: "/images/sponsors/wtm-algiers.png",
-    alt: "Sponsor logo",
+    logoSrc: "/images/sponsors/meca-club.png",
+    alt: "Meca Club",
   },
 ];

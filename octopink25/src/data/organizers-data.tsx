@@ -10,7 +10,8 @@ export const organizersData: Organizer[] = [
   {
     id: "wtm-algiers",
     logo: "/images/organizers/wtm-logo.svg",
-    description: "Promote the role of women in technology and provide a space for learning, sharing, and empowerment."
+    description: "Promote the role of women in technology and provide a space for learning, sharing, and empowerment.",
+    whyOctopink: "Because WTM cares about women’s place in tech as much as their health and well-being, aligning perfectly with Octopink’s mission to support both."
   },
   {
     id: "ai-club-algiers", 

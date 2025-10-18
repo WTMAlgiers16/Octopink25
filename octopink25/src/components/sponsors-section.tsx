@@ -7,10 +7,10 @@ export function SponsorsSection(): React.JSX.Element {
   return (
     <section id="sponsors" className="section-wrapper">
       <h2 className="section-title section-title-spacing text-center font-bold text-pink animate-fade-in-up">
-        Our Sponsors
+        Our Parteners
       </h2>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-1 lg:grid-cols-3">
         {sponsorsData.map((sponsor: SponsorItem, index) => (
           <div key={sponsor.id} className={`flex items-center justify-center animate-fade-in-up stagger-${index + 2}`}>
             <Image
@@ -23,6 +23,7 @@ export function SponsorsSection(): React.JSX.Element {
             />
           </div>
         ))}
+        
       </div>
     </section>
   );

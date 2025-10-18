@@ -11,18 +11,7 @@ export interface AgendaDay {
 
 export const agendaData: AgendaDay[] = [
   {
-    day: "14",
-    month: "OCT",
-    events: [
-      { time: "01:30 PM", title: "WELCOME" },
-      { time: "02:00 PM", title: "OPENING REMARKS BY WTM" },
-      { time: "02:40 PM", title: "INTERACTIVE BOOTHS" },
-      { time: "04:30 PM", title: "BREAK & NETWORKING" },
-      { time: "05:00 PM", title: "CLOSING OF THE DAY" },
-    ],
-  },
-  {
-    day: "18",
+    day: "21",
     month: "OCT",
     events: [
       { time: "09:00 PM", title: "WELCOME & CHECK-IN" },

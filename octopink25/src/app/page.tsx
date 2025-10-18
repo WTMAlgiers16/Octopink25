@@ -1,3 +1,4 @@
+'use client';
 import type React from "react";
 import { SponsorsSection } from "@/components/sponsors-section";
 import { AIDetectionSection } from "@/components/breast-cancer-section";

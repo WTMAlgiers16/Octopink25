@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Button from "./button"
 
 /**
  * Header component with smooth scroll navigation
@@ -69,9 +70,9 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
   const navigationItems = [
     { sectionId: "about", label: "About" },
     { sectionId: "objectives", label: "Objectives" },
-    { sectionId: "organizers", label: "Organizers" },
-    { sectionId: "sponsors", label: "Sponsors" },
     { sectionId: "detection", label: "AI Detection" },
+    { sectionId: "organizers", label: "Organizers" },
+    { sectionId: "sponsors", label: "Parteners" },
     { sectionId: "activities", label: "Activities" },
     { sectionId: "agenda", label: "Agenda" },
   ]
@@ -108,6 +109,12 @@ export function Header({ className = "", variant = "default" }: HeaderProps) {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            <Button 
+              text="Join us!" 
+              className="bg-white text-pink border-pink hover:bg-pink hover:text-white" 
+              border
+              onClick={()=> window.open("https://tripetto.app/run/BBOF4REOPG", "_blank")} 
+            />
           </nav>
 
           {/* Mobile Menu Button */}
