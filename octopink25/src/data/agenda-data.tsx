@@ -14,7 +14,11 @@ export const agendaData: AgendaDay[] = [
     day: "21",
     month: "OCT",
     events: [
-      { time: "12:00 PM to 14PM", title: "STANDS DAY & OCTOPINK ACTIVITIES" },
+      { time: "12:00 PM", title: "STANDS DAY & OCTOPINK ACTIVITIES" },
+      { time: "", title: "SELLING PINK BREAST CANCER BRACELETS" },
+      { time: "", title: "AWARENESS PRESENTATION ON BREAST CANCER"},
+      { time: "", title: "APPLIED AI ON BREAST CANCER DETECTION"},
+      { time: "", title: "WRITING ENCOURAGING MESSAGES TO BRAVE WOMEN"},
     ],
   },
   {
