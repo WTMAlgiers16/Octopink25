@@ -15,10 +15,10 @@ export const agendaData: AgendaDay[] = [
     month: "OCT",
     events: [
       { time: "12:00 PM", title: "STANDS DAY & OCTOPINK ACTIVITIES" },
-      { time: "", title: "SELLING PINK BREAST CANCER BRACELETS" },
-      { time: "", title: "AWARENESS PRESENTATION ON BREAST CANCER"},
-      { time: "", title: "APPLIED AI ON BREAST CANCER DETECTION"},
-      { time: "", title: "WRITING ENCOURAGING MESSAGES TO BRAVE WOMEN"},
+      { time: "   ~    ", title: "SELLING PINK BREAST CANCER BRACELETS" },
+      { time: "   ~    ", title: "AWARENESS PRESENTATION ON BREAST CANCER"},
+      { time: "   ~    ", title: "APPLIED AI ON BREAST CANCER DETECTION"},
+      { time: "14:00 PM", title: "WRITING ENCOURAGING MESSAGES TO BRAVE WOMEN"},
     ],
   },
   {
