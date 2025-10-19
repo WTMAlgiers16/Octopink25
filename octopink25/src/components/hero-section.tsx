@@ -25,8 +25,8 @@ export default function Hero() {
           <div className="flex gap-4 flex-row justify-around items-center mt-4">
             {/* Left card - slides from left */}
             <div className="flex flex-col text-center animate-slide-left delay-300">
-              <div className="font-bold time-text">Oct, 15th & 18th</div>
-              <div>ESI Algiers</div>
+              <div className="font-bold time-text">Oct, 21th</div>
+              <div>Stands Octopink - Espace vert ESI Algiers</div>
             </div>
 
             {/* Divider - fades in at 700ms */}
@@ -35,7 +35,7 @@ export default function Hero() {
             {/* Right card - slides from right at 600ms */}
             <div className="flex flex-col text-center animate-slide-right delay-300">
               <div className="font-bold time-text">Oct, 25th</div>
-              <div>Faculty of Medicine of Ziania</div>
+              <div>Conference & Workshops Day - Salle de conference ESI</div>
             </div>
           </div>
 
