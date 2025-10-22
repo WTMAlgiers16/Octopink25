@@ -23,15 +23,11 @@ export const agendaData: AgendaDay[] = [
   },
   {
     day: "25",
-    month: "OCT",
+    month: "OCT - ONLINE",
     events: [
-      { time: "09:00 PM", title: "WELCOME & CHECK-IN" },
       { time: "09:30 PM", title: "OFFICIAL INTRODUCTION" },
-      { time: "10:00 PM", title: "MEDICAL CONFERENCES" },
-      { time: "11:30 PM", title: "COFFEE BREAK & NETWORKING" },
-      { time: "12:15 PM", title: "CROSS PANEL HEALTH & TECH" },
-      { time: "02:00 PM", title: "BREAK" },
-      { time: "02:20 PM", title: "WORKSHOP: AI & HEALTH" },
+      { time: "10:00 PM", title: "AI APPLIED IN THE FIELD OF MEDICINE CONFERENCE" },
+      { time: "04:20 PM", title: "WORKSHOP: AI & HEALTH" },
     ],
   },
 ]
